@@ -24,8 +24,8 @@ const ForgeryDetectionDashboard = () => {
   const [dragActive, setDragActive] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [originalImageUrl, setOriginalImageUrl] = useState(null);
-  const apiUrl = "http://localhost:5000";
-
+  // const apiUrl = "http://localhost:5000";
+  const API_URL = import.meta.env.VITE_API_URL;
   // Enhanced score interpretation function
   const getScoreInterpretation = (score) => {
     const numScore = parseFloat(score);
@@ -238,7 +238,7 @@ const ForgeryDetectionDashboard = () => {
     formData.append("image", selectedFile);
 
     try {
-      const response = await fetch(`${apiUrl}/detect`, {
+      const response = await fetch(`${API_URL}/detect`, {
         method: "POST",
         body: formData,
       });
