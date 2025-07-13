@@ -651,7 +651,7 @@ const ForgeryDetectionDashboard = () => {
 
                           <div className="relative">
                             <img
-                              src={`${apiUrl}/${resultImage.overlay}`}
+                              src={`${API_URL}/${resultImage.overlay}`}
                               alt={`Overlay Page ${resultImage.page}`}
                               className="w-full h-auto rounded-lg border border-gray-600 shadow-lg"
                             />
@@ -662,7 +662,7 @@ const ForgeryDetectionDashboard = () => {
 
                           <div className="relative">
                             <img
-                              src={`${apiUrl}/${resultImage.heatmap}`}
+                              src={`${API_URL}/${resultImage.heatmap}`}
                               alt={`Heatmap Page ${resultImage.page}`}
                               className="w-full h-auto rounded-lg border border-gray-600 shadow-lg"
                             />
